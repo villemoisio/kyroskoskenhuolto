@@ -1,78 +1,142 @@
 <!DOCTYPE html>
 <html lang="fi">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kyröskosken Tekniikka & Pyörähuolto</title>
   <style>
-    body {
-      font-family: sans-serif;
-      background-color: #fdfdfd;
-      color: #222;
+    :root {
+      --primary: #264653;
+      --secondary: #2a9d8f;
+      --background: #f8f9fa;
+      --text: #222;
+    }
+
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
-    header {
-      background-color: #e0e0e0;
+
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: var(--primary);
+      color: white;
       padding: 2rem;
       text-align: center;
     }
-    h1 {
-      margin: 0;
-      font-size: 2.2rem;
+
+    .hero h1 {
+      font-size: 3rem;
     }
+
     section {
+      padding: 4rem 2rem;
       max-width: 800px;
-      margin: 2rem auto;
-      padding: 1rem;
+      margin: 0 auto;
     }
+
     h2 {
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 0.3rem;
-    }
-    footer {
-      background-color: #eee;
+      margin-bottom: 1rem;
+      color: var(--primary);
       text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      margin-top: 4rem;
     }
-    .contact p {
-      margin: 0.4rem 0;
+
+    .hinnasto-category {
+      margin-top: 2rem;
+    }
+
+    .hinnasto-category h3 {
+      color: var(--secondary);
+      margin-bottom: 0.5rem;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: var(--primary);
+      color: white;
     }
   </style>
 </head>
+
 <body>
-
-  <header>
+  <section class="hero">
     <h1>Kyröskosken Tekniikka & Pyörähuolto</h1>
-    <p>Paikallinen ja luotettava palvelu</p>
-  </header>
-
-  <section>
-    <h2>Tietokonehuolto</h2>
-    <p>Tänne hinnasto ja palvelut.</p>
+    <p>Monipuolista laitteiden huoltoa Kyröskoskella</p>
   </section>
 
-  <section>
-    <h2>Puhelinhuolto</h2>
-    <p>Tänne hinnasto ja palvelut.</p>
+  <section id="hinnasto">
+    <h2>Hinnasto</h2>
+
+    <div class="hinnasto-category">
+      <h3>Tietokonehuolto</h3>
+      <ul>
+        <li>Vianmääritys: 25 €</li>
+        <li>Windowsin tai muun järjestelmän uudelleenasennus: 40 €</li>
+        <li>Laitteiston päivitys tai puhdistus: 25 €</li>
+        <li>Kiintolevyn vaihto ja datan siirto: 35 €</li>
+      </ul>
+    </div>
+
+    <div class="hinnasto-category">
+      <h3>Puhelinhuolto</h3>
+      <ul>
+        <li>Käyttöönotto ja asetusten laitto (Apple/Android): 20–30 €</li>
+        <li>Tietojen siirto vanhasta puhelimesta uuteen (WhatsApp, kuvat jne.): 30 €</li>
+        <li>Käyttöopastus: 20 €</li>
+        <li>Asetusongelmien selvittely (esim. sähköpostit, pilvipalvelut): 25 €</li>
+      </ul>
+    </div>
+
+    <div class="hinnasto-category">
+      <h3>Polkupyörähuolto</h3>
+      <ul>
+        <li>Perushuolto: 40 €</li>
+        <li>Laajempi huolto (sis. voimansiirron ja vaihteiston säädöt): 60 €</li>
+        <li>Renkaan vaihto (tuotu irtopyörä): 10 €</li>
+        <li>Sisäkumin vaihto paikalla: 15–20 €</li>
+        <li>Jarrujen tai vaihteiden säätö: 15 €</li>
+        <li>Sähköpyörien diagnostiikka ja korjaukset: 40–80 €</li>
+      </ul>
+    </div>
   </section>
 
-  <section>
-    <h2>Pyörähuolto</h2>
-    <p>Tänne hinnasto ja palvelut.</p>
+  <section id="aukiolo">
+    <h2>Aukioloajat</h2>
+    <p>Arkisin klo 10–18, viikonloppuisin sopimuksen mukaan.</p>
   </section>
 
-  <section class="contact">
+  <section id="yhteystiedot">
     <h2>Yhteystiedot</h2>
-    <p><strong>Sähköposti:</strong> kyroskoskenhuolto@gmail.com</p>
-    <p><strong>Osoite:</strong> Esimerkkikatu 123, Kyröskoski</p>
+    <p>Sähköposti: kyroskoskenhuolto@gmail.com</p>
+    <p>Osoite: Esimerkkikatu 1, Kyröskoski</p>
   </section>
 
   <footer>
-    &copy; 2025 Kyröskosken Tekniikka & Pyörähuolto
+    <p>© 2025 Kyröskosken Tekniikka & Pyörähuolto</p>
   </footer>
-
 </body>
+
 </html>
